@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saga Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-icon home-icon">
+                <img src="/Icons/Home.svg" alt="Home" class="home-i">
+            </div>
+            <div class="sidebar-icon chat-icon">
+                <img src="/Icons/Chat.svg" alt="Chat" class="chat-i">
+            </div>
+            <div class="sidebar-icon mail-icon">
+                <img src="/Icons/Mail.svg" alt="Mail" class="mail-i">
+            </div>
+            <div class="sidebar-icon calendar-icon active">
+                <img src="/Icons/Calendar.svg" alt="Calendar" class="calendar-i">
+            </div>
+            <div class="sidebar-icon drive-icon">
+                <img src="/Icons/Drive.svg" alt="Drive" class="drive-i">
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <div class="logo">
+                        <img src="Icons/CalendarLogo.svg" alt="Logo" class="logo-icon">
+                    </div>
+                    <div class="brand">
+                        <span class="brand-name">Saga</span>
+                        <span class="brand-highlight">Calendar</span>
+                    </div>
+                </div>
+                <div class="header-center">
+                    <div class="search-bar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>
+                <div class="header-right">
+                    <button class="meet-now-btn">
+                        <img src="Icons/Meet Now.svg" alt="Meet Logo" class="meet-now-icon">
+                        <span>Meet Now</span>
+                    </button>
+                    <div class="icon-btn">
+                        <img src="/Icons/Notification.svg" alt="Notification" class="notification-icon">
+                    </div>
+                    <div class="icon-btn settings-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Toolbar -->
+            <div class="toolbar">
+                <div class="toolbar-left">
+                    <button class="new-event-btn">
+                        <img src="/Icons/Plus.svg" alt="Add" class="add-btn">
+                        <span>New Event</span>
+                    </button>
+                    <div class="view-toggles">
+                        <button class="view-toggle" data-view="day">
+                           <img src="/Icons/Day View Logo.svg" alt="Day" class="day-view-btn">
+                           <span>Day</span>
+                        </button>
+                        <button class="view-toggle" data-view="work-week">
+                            <img src="/Icons/Work View Logo.svg" alt="Work week" class="work-week-view-btn">
+                           <span>work week</span>
+                        </button>
+                        <button class="view-toggle" data-view="week">
+                            <img src="/Icons/Week.svg" alt="Week" class="week">
+                           <span>Week</span>
+                        </button>
+                        <button class="view-toggle active" data-view="month">
+                            <img src="/Icons/Month.svg" alt="Month" class="month">
+                            <span>Month</span>
+                        </button>
+                        <div class="filter-dropdown">
+                        <button class="filter-btn">
+                            <img src="/Icons/Filter.svg " alt="Filter Icon">
+                            <span>Filter</span>
+                            <img src="/Icons/Down.svg" alt="Arrow Down Icon">
+                    </div>
+                    </div>
+                </div>
+                <div class="toolbar-right">
+                    <div class="calendar-icon-btn">
+                        <img src="/Icons/Mini Calendar on Nextpage.svg" alt="Mini Calendar" class="mini-calendar-icon">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Date Controls -->
+            <div class="date-controls">
+                <div class="date-controls-left">
+                    <button class="today-btn">
+                        <img src="/Icons/Today.svg" alt="Today" class="todat-btn">
+                        <span>Today</span>
+                    </button>
+                    <div class="date-nav">
+                        <button class="date-nav-btn prev">
+                            <img src="/Icons/Up.svg" alt="Up" class="up-arrow-icon">
+                        </button>
+                    <div class="current-date">
+                        <span class="month-year">March, 2025</span>
+                    </div>
+                        <button class="date-nav-btn next">
+                            <img src="/Icons/Down.svg" alt="Down" class="down-arrow-icon">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calendar Grid -->
+            <div class="calendar-container">
+                <div class="calendar-grid">
+                    <div class="weekday-header">
+                        <div class="week-number-header"></div>
+                        <div class="weekday">Sunday</div>
+                        <div class="weekday">Monday</div>
+                        <div class="weekday">Tuesday</div>
+                        <div class="weekday">Wednesday</div>
+                        <div class="weekday">Thursday</div>
+                        <div class="weekday">Friday</div>
+                        <div class="weekday">Saturday</div>
+                    </div>
+                    <div class="calendar-body" id="calendarBody">
+                        <!-- Calendar cells will be generated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Mini Calendar -->
+                <div class="mini-calendar">
+                    <div class="mini-calendar-header">
+                        <div class="mini-month-nav">
+                            <button class="mini-nav-btn mini-prev">
+                                <img src="/Icons/Left Arrow.svg" alt="Left Arrow" class="left-arrow-icon">
+                            </button>
+                            <span class="mini-month">March 2025</span>
+                            <button class="mini-nav-btn mini-next">
+                                <img src="/Icons/Right Arrow.svg" alt="Right Arrow" class="right-arrow-icon">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mini-weekdays">
+                        <div>Su</div>
+                        <div>Mo</div>
+                        <div>Tu</div>
+                        <div>We</div>
+                        <div>Th</div>
+                        <div>Fr</div>
+                        <div>Sa</div>
+                    </div>
+                    <div class="mini-days" id="miniDays">
+                        <!-- Mini calendar days will be generated by JavaScript -->
+                    </div>
+
+                <div class="horizontal-line"></div>
+
+                    <div class="mini-calendar-footer">
+                        <button class="add-calendar-btn">
+                            <img src="/Icons/Add Calendar.svg" alt="Add Calendar" class="add-calendar">
+                            <span>Add Calendar</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Event Modal -->
+    <div class="modal" id="eventModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add a Event</h2>
+                <div class="modal-actions">
+                    <button class="discard-btn">
+                        <img src="/Icons/trash.svg" alt="Discard" class="discard-btn">
+                       <span>Discard</span>
+                    </button>
+                    <button class="save-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+                        Save
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form id="eventForm">
+                    <div class="form-group">
+                        <label class="icon-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                        </label>
+                        <input type="text" placeholder="Add a title" class="form-control">
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="allDaySwitch">
+                            <label for="allDaySwitch"></label>
+                            <span>All Day</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="icon-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </label>
+                        <input type="text" placeholder="Invite attendees" class="form-control">
+                    </div>
+                    <div class="form-group date-time-group">
+                        <label class="icon-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                        </label>
+                        <div class="date-time-controls">
+                            <input type="text" placeholder="mm/dd/yy" class="date-input">
+                            <input type="text" value="09:00" class="time-input">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="icon-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                        </label>
+                        <div class="dropdown">
+                            <button type="button" class="dropdown-toggle">
+                                Don't Repeat
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="icon-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                        </label>
+                        <div class="dropdown">
+                            <button type="button" class="dropdown-toggle">
+                                Don't Remind me
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="icon-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </label>
+                        <input type="text" placeholder="Add location" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="icon-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                        </label>
+                        <textarea placeholder="Add a Description" class="form-control textarea"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="more-options-btn">More Options</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Meet Now Modal -->
+    <div class="modal" id="meetNowModal">
+        <div class="modal-content meet-now-content">
+            <div class="modal-header">
+                <h2>Start a Meeting</h2>
+                <button class="close-btn" id="closeMeetNowModal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="meet-now-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Enter meeting name" class="form-control">
+                    </div>
+                    <div class="meeting-options">
+                        <div class="option">
+                            <input type="checkbox" id="videoOption" checked>
+                            <label for="videoOption">Turn on video</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="recordOption">
+                            <label for="recordOption">Record meeting</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="start-meeting-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553-2.276A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14v-4z"></path><rect width="15" height="14" x="3" y="5" rx="2" ry="2"></rect></svg>
+                    Start Meeting
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Panel -->
+    <div class="settings-panel" id="settingsPanel">
+        <div class="settings-header">
+            <h2>Settings</h2>
+            <button class="close-btn" id="closeSettingsPanel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+            </button>
+        </div>
+        <div class="settings-body">
+            <div class="settings-section">
+                <h3>General</h3>
+                <div class="setting-item">
+                    <div class="setting-label">Time Zone</div>
+                    <div class="setting-control">
+                        <select class="form-control">
+                            <option>Eastern Time (US & Canada)</option>
+                            <option>Pacific Time (US & Canada)</option>
+                            <option>UTC</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-label">Week starts on</div>
+                    <div class="setting-control">
+                        <select class="form-control">
+                            <option>Sunday</option>
+                            <option>Monday</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-label">Default view</div>
+                    <div class="setting-control">
+                        <select class="form-control">
+                            <option>Month</option>
+                            <option>Week</option>
+                            <option>Day</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="settings-section">
+                <h3>Appearance</h3>
+                <div class="setting-item">
+                    <div class="setting-label">Theme</div>
+                    <div class="setting-control">
+                        <select class="form-control">
+                            <option>Light</option>
+                            <option>Dark</option>
+                            <option>System Default</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
