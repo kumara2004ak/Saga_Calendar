@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saga Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-icon active">
+                <img src="/Icons/Home.svg" alt="Home" class="home-icon">
+            </div>
+            <div class="sidebar-icon">
+                <img src="/Icons/Chat.svg" alt="Chat" class="chat-icon">
+            </div>
+            <div class="sidebar-icon">
+                <img src="/Icons/Mail.svg" alt="Mail" class="mail-icon">
+            </div>
+            <div class="sidebar-icon">
+                <img src="/Icons/Calendar.svg" alt="Calendar" class="calendar-logo">
+            </div>
+            <div class="sidebar-icon">
+                <img src="/Icons/Drive.svg" alt="Drive" class="drive-icon">
+            </div>
+        
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="logo">
+                    <img src="/Icons/CalendarLogo.svg" alt="Saga Calendar Logo" class="logo-icon">
+                    <span class="logo-text">Saga Calendar</span>
+                </div>
+                <div class="search-container">
+                    <div class="search-bar">
+                        <img src="/Icons/Search .svg" alt="Search Icon" class="search-icon">
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>
+                <div class="top-icons">
+                    <div class="icon-button">
+                        <img src="/Icons/Meet Now.svg" alt="Meet Now Icon" class="meet-now-icon">
+                        <span>Meet Now</span>
+                    </div>
+                    <div class="icon">
+                        <img src="/Icons/Notification.svg" alt="Notification Icon" class="notification-icon">
+                    </div>
+                    <div class="icon">
+                        <img src="Icons/Setting.svg" alt="Settings Icon" class="settings-icon">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calendar Controls -->
+            <div class="calendar-controls">
+                <div class="left-controls">
+                    <button class="new-event-btn">
+                        <i class="fas fa-plus"></i>
+                        <span>New Event</span>
+                    </button>
+                    <div class="view-buttons">
+                        <button class="view-btn" data-view="day">
+                            <img src="Icons/Day View Logo.svg" alt="Day View" class="day-view-icon">
+                            <span>Day</span>
+                        </button>
+                        <button class="view-btn" data-view="work-week">
+                            <img src="Icons/Work View Logo.svg" alt="Work Week" class="work week-view-icon">
+                            <span>Work week</span>
+                        </button>
+                        <button class="view-btn" data-view="week">
+                            <img src="Icons/Week.svg" alt="Week" class="week-view-icon">
+                            <span>Week</span>
+                        </button>
+                        <button class="view-btn active" data-view="month">
+                            <img src="Icons/Month.svg" alt="Month" class="month-view-icon">
+                            <span>Month</span>
+                        </button>
+                        <div class="dropdown">
+                            <button class="filter-btn">
+                                <img src="Icons/Filter.svg" alt="Filter" class="filter-icon">
+                            <span>Filter</span>
+                            <img src="Icons/Down.svg" alt="Down" class="Down-icon">
+                            </button>
+                            <div class="dropdown-content filter-dropdown">
+                                <div class="dropdown-item">
+                                    <input type="checkbox" id="personal" checked>
+                                    <label for="personal">Meeting</label>
+                                </div>
+                                <div class="dropdown-item">
+                                    <input type="checkbox" id="work" checked>
+                                    <label for="work">Show</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-controls">
+                    <img src="Icons/Mini Calendar on Nextpage.svg" alt="Mini Calendar" class="mini-calendar-icon">
+                </div>
+            </div>
+
+            <!-- Date Navigation -->
+            <div class="date-navigation">
+                <button class="today-btn">
+                    <img src="Icons/Today.svg" alt="Today" class="today-icon">
+                    <span>Today</span>
+                </button>
+                <div class="date-selector">
+                    <button class="nav-btn prev-btn">
+                        <img src="Icons/Up.svg" alt="Up" class="up-arrow-icon">
+                    </button>
+                    <button class="nav-btn next-btn">
+                        <img src="Icons/Down.svg" alt="Down" class="down-icon">
+                    </button>
+                    <div class="dropdown">
+                        <button class="month-year-btn">
+                            <span id="current-month-year">March, 2025</span>
+                        </button>
+                        <div class="dropdown-content month-dropdown">
+                            <div class="month-picker">
+                                <div class="month-item" data-month="0">January</div>
+                                <div class="month-item" data-month="1">February</div>
+                                <div class="month-item" data-month="2">March</div>
+                                <div class="month-item" data-month="3">April</div>
+                                <div class="month-item" data-month="4">May</div>
+                                <div class="month-item" data-month="5">June</div>
+                                <div class="month-item" data-month="6">July</div>
+                                <div class="month-item" data-month="7">August</div>
+                                <div class="month-item" data-month="8">September</div>
+                                <div class="month-item" data-month="9">October</div>
+                                <div class="month-item" data-month="10">November</div>
+                                <div class="month-item" data-month="11">December</div>
+                            </div>
+                            <div class="year-picker">
+                                <button class="year-nav prev-year">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <div class="year-display">2025</div>
+                                <button class="year-nav next-year">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calendar Grid -->
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <div class="week-number-header"></div>
+                    <div class="day-header">Sunday</div>
+                    <div class="day-header">Monday</div>
+                    <div class="day-header">Tuesday</div>
+                    <div class="day-header">Wednesday</div>
+                    <div class="day-header">Thursday</div>
+                    <div class="day-header">Friday</div>
+                    <div class="day-header">Saturday</div>
+                </div>
+            <div class="calendar-grid" id="calendar-grid">
+                    <!-- Calendar cells will be generated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Event Modal -->
+            <div id="event-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2>Add New Event</h2>
+                    <form id="event-form">
+                        <div class="form-group">
+                            <label for="event-title">Title</label>
+                            <input type="text" id="event-title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-date">Date</label>
+                            <input type="text" id="event-date" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-time">Time</label>
+                            <input type="time" id="event-time">
+                        </div>
+                        <div class="form-group">
+                            <label for="event-description">Description</label>
+                            <textarea id="event-description"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="cancel-btn">Cancel</button>
+                            <button type="submit" class="save-btn">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
